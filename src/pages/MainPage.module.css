@@ -1,24 +1,30 @@
 .container {
+  min-width: 600px;
   padding: 30px;
   height: 100vh;
   display: grid;
   grid-template-areas: 'search search' 'list message';
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 50px 1fr;
-  gap: 10px;
+  grid-row-gap: 30px;
+  grid-column-gap: 10px;
 }
 
 .searchBox {
   grid-area: search;
-  background-color: red;
+  /*background-color: red;*/
 }
 
 .listBox {
+  overflow: scroll;
+  overflow-x: hidden;
   grid-area: list;
-  background-color: green;
+  /*background-color: green;*/
 }
 
 .messagesBox {
+  overflow: scroll;
+  overflow-x: hidden;
   grid-area: message;
-  background-color: blue;
+  /*background-color: blue;*/
 }
