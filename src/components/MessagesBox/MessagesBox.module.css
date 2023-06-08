@@ -1,0 +1,15 @@
+.list {
+  margin: 15px 10px 15px 5px;
+  background-color: #efebe9;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.controls {
+  height: 35px;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+  align-items: center;
+}
