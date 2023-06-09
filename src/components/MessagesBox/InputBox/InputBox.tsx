@@ -3,7 +3,7 @@ import { IconButton, InputAdornment, OutlinedInput } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import { INPUT_BACKGROUND_COLOR } from '../../../constants/colors';
 
-interface InputBoxProps {
+export interface InputBoxProps {
   onSubmit: (value: string) => void;
 }
 
@@ -31,7 +31,7 @@ const InputBox = (props: InputBoxProps) => {
         type={'text'}
         endAdornment={
           <InputAdornment position="end">
-            <IconButton aria-label="toggle password visibility" onClick={handleSubmit} edge="end">
+            <IconButton aria-label="send-button" onClick={handleSubmit} edge="end">
               <SendIcon />
             </IconButton>
           </InputAdornment>

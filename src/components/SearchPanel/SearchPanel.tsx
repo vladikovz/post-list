@@ -4,7 +4,7 @@ import { TextField, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { Filter } from '../../interfaces/Filter';
 import { INPUT_BACKGROUND_COLOR } from '../../constants/colors';
 
-interface SearchPanelProps {
+export interface SearchPanelProps {
   onSubmit: (inputValue: string, filter: Filter) => void;
 }
 const SearchPanel = (props: SearchPanelProps) => {
@@ -23,7 +23,7 @@ const SearchPanel = (props: SearchPanelProps) => {
   const handleToggleButtonChange = (filterValue: Filter) => {
     if (filterValue && filterValue !== filter) {
       setFilter(filterValue);
-      onSubmit(inputValue, filter);
+      onSubmit(inputValue, filterValue);
     }
   };
 

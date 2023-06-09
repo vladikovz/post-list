@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './EmptyPage.module.css';
 
-interface EmptyPageProps {
+export interface EmptyPageProps {
   children: React.ReactNode;
 }
 const EmptyPage = (props: EmptyPageProps) => {
