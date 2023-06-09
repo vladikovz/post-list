@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './SearchPanel.module.css';
 import { TextField, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { Filter } from '../../interfaces/Filter';
+import { INPUT_BACKGROUND_COLOR } from '../../constants/colors';
 
 interface SearchPanelProps {
   onSubmit: (inputValue: string, filter: Filter) => void;
@@ -29,14 +30,14 @@ const SearchPanel = (props: SearchPanelProps) => {
   return (
     <div className={styles.container}>
       <TextField
-        sx={{ backgroundColor: 'white' }}
+        sx={{ backgroundColor: INPUT_BACKGROUND_COLOR }}
         placeholder={'What are you looking for?'}
         variant="outlined"
         value={inputValue}
         onChange={(e) => handleInputChange(e.target.value)}
       />
       <ToggleButtonGroup
-        sx={{ backgroundColor: 'white' }}
+        sx={{ backgroundColor: INPUT_BACKGROUND_COLOR }}
         size={'small'}
         color="primary"
         value={filter}
