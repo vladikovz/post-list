@@ -52,32 +52,6 @@ export const commentsReducer = (store = initialStore, action: CommentAction) => 
         ...store,
         comments,
       };
-    // case PostActionTypes.DELETE_POST:
-    //     posts = posts.filter((post) => post.id !== action.payload.id)
-    //     return { ...store, posts }
-    // case PostActionTypes.LIKE_POST:
-    //     posts = posts.map((post: IPost) =>
-    //         post.id === action.payload.id
-    //             ? {
-    //                   ...post,
-    //                   likesCount: post.likesCount ? post.likesCount + 1 : 1,
-    //               }
-    //             : post
-    //     )
-    //     return { ...store, posts }
-    // case PostActionTypes.DISLIKE_POST:
-    //     posts = posts.map((post: IPost) =>
-    //         post.id === action.payload.id
-    //             ? {
-    //                   ...post,
-    //                   likesCount:
-    //                       post.likesCount > 1
-    //                           ? post.likesCount - 1
-    //                           : undefined,
-    //               }
-    //             : post
-    //     )
-    //     return { ...store, posts }
     default:
       return store;
   }

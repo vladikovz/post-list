@@ -8,7 +8,6 @@ export const getPosts = () => {
     try {
       const response = await axios.get(POSTS_ENDPOINT);
       dispatch(addPosts(response.data));
-      // console.log(response.data);
     } catch (e) {
       console.log(e);
     }

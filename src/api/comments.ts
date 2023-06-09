@@ -8,7 +8,6 @@ export const getComments = () => {
     try {
       const response = await axios.get(COMMENTS_ENDPOINT);
       dispatch(addComments(response.data));
-      // console.log(response.data);
     } catch (e) {
       console.log(e);
     }

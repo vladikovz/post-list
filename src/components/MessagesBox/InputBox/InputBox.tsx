@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IconButton, InputAdornment, OutlinedInput } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import { INPUT_BACKGROUND_COLOR } from '../../../constants/colors';
 
 interface InputBoxProps {
   onSubmit: (value: string) => void;
@@ -22,7 +23,7 @@ const InputBox = (props: InputBoxProps) => {
   return (
     <div>
       <OutlinedInput
-        sx={{ width: '100%', backgroundColor: 'white' }}
+        sx={{ width: '100%', backgroundColor: INPUT_BACKGROUND_COLOR }}
         placeholder={'Input text'}
         value={value}
         onChange={(e) => handleInputChange(e.target.value)}

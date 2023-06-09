@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Autocomplete, IconButton, InputAdornment, TextField } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import { INPUT_BACKGROUND_COLOR } from '../../../constants/colors';
 
 const TAGS = ['animals', 'cars', 'sport', 'gym', 'movies'];
 
@@ -31,7 +32,7 @@ const TagBox = (props: TagBoxProps) => {
         onChange={(e, v) => handleInputChange(v)}
         onInputChange={(e, v) => handleInputChange(v)}
         freeSolo
-        sx={{ backgroundColor: 'white' }}
+        sx={{ backgroundColor: INPUT_BACKGROUND_COLOR }}
         renderInput={(params) => (
           <TextField
             {...params}

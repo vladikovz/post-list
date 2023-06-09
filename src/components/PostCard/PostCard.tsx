@@ -1,5 +1,6 @@
 import { Card, CardActionArea, CardContent, Typography } from '@mui/material';
 import styles from './PostCard.module.css';
+import { IS_SELECTED_COLOR } from '../../constants/colors';
 
 interface PostCardProps {
   title: string;
@@ -13,8 +14,8 @@ const PostCard = (props: PostCardProps) => {
   return (
     <div className={styles.container}>
       <Card>
-        <CardActionArea sx={{ backgroundColor: isSelected ? '#c2c2c2' : undefined }}>
-          <CardContent sx={{}}>
+        <CardActionArea sx={{ backgroundColor: isSelected ? IS_SELECTED_COLOR : undefined }}>
+          <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {title}
             </Typography>

@@ -21,6 +21,7 @@ import AddIcon from '@mui/icons-material/Add';
 import TagBox from './TagBox/TagBox';
 import { Tag } from '../../interfaces/Tag';
 import Title from '../Title/Title';
+import { LIST_ITEM_BACKGROUND_COLOR } from '../../constants/colors';
 
 interface MessagesBoxProps {
   comments: Comment[];
@@ -64,7 +65,11 @@ const MessagesBox = (props: MessagesBoxProps) => {
         {comments.map((comment) => (
           <div className={styles.list} key={comment.id}>
             <ListItem
-              sx={{ backgroundColor: '#bcaaa4', flexDirection: 'column', borderRadius: '10px' }}
+              sx={{
+                backgroundColor: LIST_ITEM_BACKGROUND_COLOR,
+                flexDirection: 'column',
+                borderRadius: '10px',
+              }}
             >
               <ListItemText primary={comment.name} secondary={comment.body} />
               <div className={styles.controls}>
@@ -100,12 +105,7 @@ const MessagesBox = (props: MessagesBoxProps) => {
                 </>
               )}
             </ListItem>
-            <Stack
-              sx={{ margin: '10px 20px' }}
-              alignItems={'flex-start'}
-              // direction="column"
-              spacing={1}
-            >
+            <Stack sx={{ margin: '10px 20px' }} alignItems={'flex-start'} spacing={1}>
               {comment.answers?.map((answer) => (
                 <Chip key={answer.id} label={answer.body} />
               ))}
