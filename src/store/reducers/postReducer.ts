@@ -1,6 +1,6 @@
-import { PostActionTypes } from '../types';
 import { Post } from '../../interfaces/Post';
 import { User } from '../../interfaces/User';
+import { PostActionTypes } from '../types';
 
 export interface PostAction {
   type: PostActionTypes;

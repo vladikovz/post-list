@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { CircularProgress } from '@mui/material';
+
 import styles from './Spinner.module.css';
 
 const Spinner = () => {

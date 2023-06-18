@@ -1,5 +1,5 @@
-import { UserActionTypes } from '../types';
 import { User } from '../../interfaces/User';
+import { UserActionTypes } from '../types';
 
 export interface UserAction {
   type: UserActionTypes;

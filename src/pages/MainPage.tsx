@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
+
+import styles from './MainPage.module.css';
+import Api from '../api';
 import CardsList from '../components/CardsList/CardsList';
+import EmptyPage from '../components/EmptyPage/EmptyPage';
 import MessagesBox from '../components/MessagesBox/MessagesBox';
 import SearchPanel from '../components/SearchPanel/SearchPanel';
-import styles from './MainPage.module.css';
+import Spinner from '../components/Spinner/Spinner';
 import { useAppDispatch } from '../hooks/useAppDispatch';
 import { useTypedSelector } from '../hooks/useTypedSelector';
-import Api from '../api';
 import { Comment } from '../interfaces/Comment';
 import { Filter } from '../interfaces/Filter';
 import { filterPost, resetFilterPost, setSelectedPost } from '../store/actions/postActions';
-import EmptyPage from '../components/EmptyPage/EmptyPage';
-import Spinner from '../components/Spinner/Spinner';
 
 const MainPage = () => {
   const dispatch = useAppDispatch();

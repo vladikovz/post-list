@@ -1,8 +1,8 @@
-import { PostActionTypes } from '../types';
-import { PostAction } from '../reducers/postReducer';
-import { Post } from '../../interfaces/Post';
 import { Filter } from '../../interfaces/Filter';
+import { Post } from '../../interfaces/Post';
 import { User } from '../../interfaces/User';
+import { PostAction } from '../reducers/postReducer';
+import { PostActionTypes } from '../types';
 
 export const addPosts = (payload: { posts: Post[] }): PostAction => ({
   type: PostActionTypes.ADD_POST,

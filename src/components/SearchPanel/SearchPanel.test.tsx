@@ -1,4 +1,7 @@
+import React from 'react';
+
 import { render, screen, fireEvent } from '@testing-library/react';
+
 import SearchPanel, { SearchPanelProps } from './SearchPanel';
 
 const mockSubmit = jest.fn();

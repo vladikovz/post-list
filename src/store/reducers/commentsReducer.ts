@@ -1,5 +1,5 @@
-import { CommentActionTypes } from '../types';
 import { Comment } from '../../interfaces/Comment';
+import { CommentActionTypes } from '../types';
 
 export interface CommentAction {
   type: CommentActionTypes;

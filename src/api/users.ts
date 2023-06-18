@@ -1,7 +1,9 @@
 import { Dispatch } from 'react';
+
 import axios from 'axios';
-import { addUsers } from '../store/actions/userActions';
+
 import { USERS_ENDPOINT } from '../constants/endpoints';
+import { addUsers } from '../store/actions/userActions';
 
 export const getUsers = () => {
   return async (dispatch: Dispatch<any>) => {

@@ -1,4 +1,7 @@
+import React from 'react';
+
 import { Card, CardActionArea, CardContent, Typography } from '@mui/material';
+
 import styles from './PostCard.module.css';
 import { IS_SELECTED_COLOR } from '../../constants/colors';
 

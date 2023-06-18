@@ -1,6 +1,6 @@
+import * as comments from './comments';
 import * as posts from './posts';
 import * as users from './users';
-import * as comments from './comments';
 
 const Api = {
   posts,
