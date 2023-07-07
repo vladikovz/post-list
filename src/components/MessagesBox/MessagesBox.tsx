@@ -87,6 +87,7 @@ const MessagesBox = (props: MessagesBoxProps) => {
                   <Button
                     onClick={() => handleReplyClick(comment.id)}
                     sx={{ alignSelf: 'flex-end' }}
+                    data-testid="reply-button"
                   >
                     Reply
                   </Button>
@@ -109,7 +110,7 @@ const MessagesBox = (props: MessagesBoxProps) => {
             </ListItem>
             <Stack sx={{ margin: '10px 20px' }} alignItems={'flex-start'} spacing={1}>
               {comment.answers?.map((answer) => (
-                <Chip key={answer.id} label={answer.body} />
+                <Chip key={answer.id} label={answer.body} data-testid="reply-item" />
               ))}
             </Stack>
             {comment.id === replyId && <InputBox onSubmit={addNewAnswer} />}

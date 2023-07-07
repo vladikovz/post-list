@@ -14,9 +14,9 @@ describe('SearchPanel', () => {
     render(<SearchPanel {...defaultProps} />);
 
     const textFieldElement = screen.getByPlaceholderText('What are you looking for?');
-    const usernameToggleButton = screen.getByRole('button', { name: 'Username' });
-    const userIdToggleButton = screen.getByRole('button', { name: 'User id' });
-    const bodyToggleButton = screen.getByRole('button', { name: 'Body' });
+    const usernameToggleButton = screen.getByRole('button', { name: /Username/i });
+    const userIdToggleButton = screen.getByRole('button', { name: /User id/i });
+    const bodyToggleButton = screen.getByRole('button', { name: /Body/i });
 
     expect(textFieldElement).toBeInTheDocument();
     expect(usernameToggleButton).toBeInTheDocument();
@@ -24,7 +24,7 @@ describe('SearchPanel', () => {
     expect(bodyToggleButton).toBeInTheDocument();
   });
 
-  it('triggers the onSubmit callback with the input value and selected filter when input text changes', () => {
+  it('triggers the onSubmit callback with the input value and selected default filter when input text changes', () => {
     render(<SearchPanel {...defaultProps} />);
 
     const textFieldElement = screen.getByPlaceholderText('What are you looking for?');
@@ -37,10 +37,15 @@ describe('SearchPanel', () => {
   it('triggers the onSubmit callback with the input value and selected filter when toggle button changes', () => {
     render(<SearchPanel {...defaultProps} />);
 
-    const userIdToggleButton = screen.getByRole('button', { name: 'User id' });
+    const userIdToggleButton = screen.getByRole('button', { name: /User id/i });
+    const usernameToggleButton = screen.getByRole('button', { name: /Username/i });
+    const bodyToggleButton = screen.getByRole('button', { name: /Body/i });
 
     fireEvent.click(userIdToggleButton);
-
     expect(mockSubmit).toHaveBeenCalledWith('', 'userId');
+    fireEvent.click(usernameToggleButton);
+    expect(mockSubmit).toHaveBeenCalledWith('', 'username');
+    fireEvent.click(bodyToggleButton);
+    expect(mockSubmit).toHaveBeenCalledWith('', 'body');
   });
 });

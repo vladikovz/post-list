@@ -1,9 +1,10 @@
 import { Answer } from '../../interfaces/Answer';
+import { Comment } from '../../interfaces/Comment';
 import { Tag } from '../../interfaces/Tag';
 import { CommentAction } from '../reducers/commentsReducer';
 import { CommentActionTypes } from '../types';
 
-export const addComments = (payload: { comments: Comment }): CommentAction => ({
+export const addComments = (payload: Comment[]): CommentAction => ({
   type: CommentActionTypes.ADD_COMMENTS,
   payload,
 });

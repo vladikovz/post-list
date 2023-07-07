@@ -10,9 +10,11 @@ const defaultProps: InputBoxProps = {
 };
 
 describe('InputBox', () => {
-  it('renders input box correctly', () => {
+  beforeEach(() => {
     render(<InputBox {...defaultProps} />);
+  });
 
+  it('renders input box correctly', () => {
     const inputElement = screen.getByPlaceholderText('Input text');
     const sendButtonElement = screen.getByLabelText('send-button');
 
@@ -21,8 +23,6 @@ describe('InputBox', () => {
   });
 
   it('triggers the onSubmit callback with the input value when send button is clicked', () => {
-    render(<InputBox {...defaultProps} />);
-
     const inputElement = screen.getByPlaceholderText('Input text');
     const sendButtonElement = screen.getByLabelText('send-button');
 
@@ -33,8 +33,6 @@ describe('InputBox', () => {
   });
 
   it('clears the input value after submitting', () => {
-    render(<InputBox {...defaultProps} />);
-
     const inputElement = screen.getByPlaceholderText('Input text');
     const sendButtonElement = screen.getByLabelText('send-button');
 
