@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Autocomplete, IconButton, InputAdornment, TextField } from '@mui/material';
+
 import SendIcon from '@mui/icons-material/Send';
+import { Autocomplete, IconButton, InputAdornment, TextField } from '@mui/material';
+
 import { INPUT_BACKGROUND_COLOR } from '../../../constants/colors';
 
 const TAGS = ['animals', 'cars', 'sport', 'gym', 'movies'];

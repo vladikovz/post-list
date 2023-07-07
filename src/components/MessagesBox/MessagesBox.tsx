@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Comment } from '../../interfaces/Comment';
+
+import AddIcon from '@mui/icons-material/Add';
 import {
   Button,
   Chip,
@@ -11,17 +12,18 @@ import {
   Stack,
   Tooltip,
 } from '@mui/material';
-import InputBox from './InputBox/InputBox';
-import { useAppDispatch } from '../../hooks/useAppDispatch';
-import { addAnswer, addTag } from '../../store/actions/commentActions';
-import { Answer } from '../../interfaces/Answer';
 import { v4 as uuidv4 } from 'uuid';
+
+import InputBox from './InputBox/InputBox';
 import styles from './MessagesBox.module.css';
-import AddIcon from '@mui/icons-material/Add';
 import TagBox from './TagBox/TagBox';
-import { Tag } from '../../interfaces/Tag';
-import Title from '../Title/Title';
 import { LIST_ITEM_BACKGROUND_COLOR } from '../../constants/colors';
+import { useAppDispatch } from '../../hooks/useAppDispatch';
+import { Answer } from '../../interfaces/Answer';
+import { Comment } from '../../interfaces/Comment';
+import { Tag } from '../../interfaces/Tag';
+import { addAnswer, addTag } from '../../store/actions/commentActions';
+import Title from '../Title/Title';
 
 interface MessagesBoxProps {
   comments: Comment[];

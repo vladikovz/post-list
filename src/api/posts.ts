@@ -1,7 +1,9 @@
 import { Dispatch } from 'react';
+
 import axios from 'axios';
-import { addPosts } from '../store/actions/postActions';
+
 import { POSTS_ENDPOINT } from '../constants/endpoints';
+import { addPosts } from '../store/actions/postActions';
 
 export const getPosts = () => {
   return async (dispatch: Dispatch<any>) => {

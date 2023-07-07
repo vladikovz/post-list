@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { IconButton, InputAdornment, OutlinedInput } from '@mui/material';
+
 import SendIcon from '@mui/icons-material/Send';
+import { IconButton, InputAdornment, OutlinedInput } from '@mui/material';
+
 import { INPUT_BACKGROUND_COLOR } from '../../../constants/colors';
 
 export interface InputBoxProps {

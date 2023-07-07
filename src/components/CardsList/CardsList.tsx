@@ -1,11 +1,12 @@
 import React from 'react';
-import PostCard from '../PostCard/PostCard';
-import { Post } from '../../interfaces/Post';
-import { User } from '../../interfaces/User';
+
 import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
-import Title from '../Title/Title';
+import { Post } from '../../interfaces/Post';
+import { User } from '../../interfaces/User';
 import { setSelectedPost } from '../../store/actions/postActions';
+import PostCard from '../PostCard/PostCard';
+import Title from '../Title/Title';
 
 interface CardListProps {
   posts: Post[];

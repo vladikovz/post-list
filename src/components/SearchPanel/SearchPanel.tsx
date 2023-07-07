@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import styles from './SearchPanel.module.css';
+
 import { TextField, ToggleButton, ToggleButtonGroup } from '@mui/material';
-import { Filter } from '../../interfaces/Filter';
+
+import styles from './SearchPanel.module.css';
 import { INPUT_BACKGROUND_COLOR } from '../../constants/colors';
+import { Filter } from '../../interfaces/Filter';
 
 export interface SearchPanelProps {
   onSubmit: (inputValue: string, filter: Filter) => void;

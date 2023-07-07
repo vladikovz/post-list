@@ -1,4 +1,7 @@
+import React from 'react';
+
 import { render, screen, fireEvent } from '@testing-library/react';
+
 import InputBox, { InputBoxProps } from './InputBox';
 
 const mockSubmit = jest.fn();
